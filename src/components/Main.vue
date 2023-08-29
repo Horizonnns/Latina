@@ -43,7 +43,7 @@ const buttons = [
     class="relative flex flex-col justify-center items-center overflow-x-hidden"
   >
     <div class="z-50 bg-white/50 sm:bg-white/80">
-      <div class="w-full max-w-lg shadow-lg rounded-lg px-16 md:px-10 py-6">
+      <div class="w-full max-w-lg shadow-lg rounded-lg px-4 md:px-10 py-6">
         <Logo class="mx-auto mb-4" />
 
         <div class="text-center space-y-1 mb-3">
