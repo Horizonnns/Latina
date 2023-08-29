@@ -207,7 +207,7 @@ const buttons = [
               <textarea
                 id="wish"
                 type="text"
-                class="rounded-sm border-b-2 border-green-800 px-4 pt-2 pb-6 w-full text-lg outline-none bg-white/20"
+                class="rounded-sm border-b-2 border-green-800 px-4 pt-2 pb-4 w-full text-lg outline-none bg-white/20"
               />
             </div>
           </div>
@@ -215,7 +215,7 @@ const buttons = [
           <div class="flex items-center justify-between">
             <!-- socials -->
             <div class="flex flex-col space-y-1 font-bold">
-              <a href="#" class="flex items-center space-x-2">
+              <a href="#" class="group flex items-center space-x-2">
                 <svg
                   class="fill-[#6F7A8B] hover:fill-primary"
                   width="17"
@@ -229,10 +229,12 @@ const buttons = [
                   />
                 </svg>
 
-                <p>latina.dushanbe</p>
+                <p class="group-hover:text-white duration-150">
+                  latina.dushanbe
+                </p>
               </a>
 
-              <a href="#" class="flex items-center space-x-2">
+              <a href="#" class="group flex items-center space-x-2">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -248,7 +250,9 @@ const buttons = [
                   />
                 </svg>
 
-                <p>(+992) 711 070 707</p>
+                <p class="group-hover:text-white duration-150">
+                  (+992) 711 070 707
+                </p>
               </a>
             </div>
 
