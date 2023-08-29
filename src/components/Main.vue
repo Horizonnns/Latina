@@ -42,8 +42,8 @@ const buttons = [
   <main
     class="relative flex flex-col justify-center items-center overflow-x-hidden"
   >
-    <div class="z-50 bg-white/80">
-      <div class="w-full max-w-lg shadow-lg rounded-lg px-10 py-6">
+    <div class="z-50 bg-white/50 sm:bg-white/80">
+      <div class="w-full max-w-lg shadow-lg rounded-lg px-16 md:px-10 py-6">
         <Logo class="mx-auto mb-4" />
 
         <div class="text-center space-y-1 mb-3">
@@ -133,17 +133,15 @@ const buttons = [
               <input
                 id="place"
                 type="text"
+                placeholder="кратко"
                 class="rounded-sm border-b-2 border-green-800 px-4 py-1.5 w-full outline-none bg-white/20"
               />
             </div>
 
             <div class="flex flex-col items-center space-y-3">
-              <div class="space-y-1">
-                <p class="text-center text-xl">
-                  Порекомендуете ли Вы нас своим друзьям/знакомым?
-                </p>
-                <p class="text-center text-xs">(Закрасьте кружок)</p>
-              </div>
+              <p class="text-center text-xl">
+                Порекомендуете ли Вы нас своим друзьям/знакомым?
+              </p>
 
               <div class="flex font-bold text-2xl space-x-4">
                 <div
@@ -166,12 +164,12 @@ const buttons = [
           <div class="space-y-6">
             <div class="space-y-1">
               <p class="text-center text-xl">
-                С какой вероятность от 1 до 10 вы к нам вернётесь?
+                С какой вероятностью от 1 до 5 вы к нам вернётесь?
               </p>
               <p class="text-center text-xs">(Закрасьте кружок)</p>
             </div>
 
-            <div class="w-full flex justify-between text-base px-10">
+            <div class="w-full flex justify-between text-base">
               <div v-for="number in numbers" :key="number">
                 <button
                   @click="form.comQuality = number.id"
@@ -212,12 +210,12 @@ const buttons = [
             </div>
           </div>
 
-          <div class="flex items-center justify-between">
+          <div class="flex flex-col items-center justify-between space-y-4">
             <!-- socials -->
-            <div class="flex flex-col space-y-1 font-bold">
+            <div class="flex flex-col items-start space-y-1 font-bold">
               <a href="#" class="group flex items-center space-x-2">
                 <svg
-                  class="fill-[#6F7A8B] hover:fill-primary"
+                  class="fill-[#6F7A8B] group-hover:fill-white duration-150"
                   width="17"
                   height="17"
                   viewBox="0 0 17 17"
@@ -236,12 +234,12 @@ const buttons = [
 
               <a href="#" class="group flex items-center space-x-2">
                 <svg
+                  class="group-hover:stroke-white duration-150 w-5 h-5"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="#6F7A8B"
-                  class="w-5 h-5"
                 >
                   <path
                     stroke-linecap="round"
@@ -257,7 +255,7 @@ const buttons = [
             </div>
 
             <button
-              class="bg-green-600 hover:bg-green-500 duration-100 text-white rounded-full px-16 py-2"
+              class="bg-green-600 hover:bg-green-500 duration-100 text-white rounded-full px-16 py-3"
             >
               Отправить
             </button>
