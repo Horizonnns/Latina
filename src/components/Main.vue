@@ -54,14 +54,14 @@ const buttons = [
               id="place"
               type="text"
               placeholder="Имя официанта который вас обслуживает"
-              class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20 placeholder:text-gray-400"
+              class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20 placeholder:text-gray-800"
             />
 
             <input
               id="place"
               type="text"
               placeholder="Как часто вы у нас бываете?"
-              class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20"
+              class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20 placeholder:text-gray-800"
             />
           </div>
         </div>
@@ -143,7 +143,7 @@ const buttons = [
                 id="place"
                 type="text"
                 placeholder="кратко"
-                class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20"
+                class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20 placeholder:text-gray-800"
               />
             </div>
 
@@ -181,7 +181,7 @@ const buttons = [
                 <button
                   @click="form.comQuality = number.id"
                   :class="[form.comQuality === number.id ? 'bg-smile' : '']"
-                  class="border border-gray-400 text-gray-500 rounded-full w-9 h-9"
+                  class="border border-gray-800 text-gray-500 rounded-full w-9 h-9"
                 >
                   {{ number.num }}
                 </button>
@@ -200,7 +200,7 @@ const buttons = [
                 id="num"
                 type="number"
                 placeholder="+992"
-                class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20"
+                class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20 placeholder:text-gray-800"
               />
             </div>
 
