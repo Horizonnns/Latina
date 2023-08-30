@@ -14,6 +14,7 @@ export default {
       colors: {
         primary: '#00b956',
         link: '#35aaf2',
+        smile: '#f8e672',
         gray: {
           10: '#D1D5DB',
           20: '#3C3C43',

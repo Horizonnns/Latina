@@ -43,15 +43,26 @@ const buttons = [
     class="relative flex flex-col justify-center items-center overflow-x-hidden"
   >
     <div class="z-50 bg-white/50 sm:bg-white/80">
-      <div class="w-full max-w-lg shadow-lg rounded-lg px-4 md:px-10 py-6">
+      <div class="w-full max-w-lg shadow-lg rounded-lg px-6 md:px-10 py-6">
         <Logo class="mx-auto mb-4" />
 
         <div class="text-center space-y-1 mb-3">
           <p class="text-3xl font-bold text-center uppercase">Отзыв Гостя</p>
 
-          <div class="text-base text-center">
-            <p>Имя официанта который вас обслуживает</p>
-            <p>Как часто вы у нас бываете?</p>
+          <div class="text-base text-center space-y-2">
+            <input
+              id="place"
+              type="text"
+              placeholder="Имя официанта который вас обслуживает"
+              class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20 placeholder:text-gray-400"
+            />
+
+            <input
+              id="place"
+              type="text"
+              placeholder="Как часто вы у нас бываете?"
+              class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20"
+            />
           </div>
         </div>
 
@@ -72,9 +83,7 @@ const buttons = [
                   class="cursor-pointer rounded-full w-8 h-8"
                   :is="smile.icon"
                   @click="form.iconService = smile.id"
-                  :class="[
-                    form.iconService === smile.id ? 'bg-yellow-300' : '',
-                  ]"
+                  :class="[form.iconService === smile.id ? 'bg-smile' : '']"
                 ></component>
               </div>
             </div>
@@ -96,7 +105,7 @@ const buttons = [
                   class="cursor-pointer rounded-full w-8 h-8"
                   :is="smile.icon"
                   @click="form.iconFood = smile.id"
-                  :class="[form.iconFood === smile.id ? 'bg-yellow-300' : '']"
+                  :class="[form.iconFood === smile.id ? 'bg-smile' : '']"
                 ></component>
               </div>
             </div>
@@ -118,7 +127,7 @@ const buttons = [
                   class="cursor-pointer rounded-full w-8 h-8"
                   :is="smile.icon"
                   @click="form.iconShow = smile.id"
-                  :class="[form.iconShow === smile.id ? 'bg-yellow-300' : '']"
+                  :class="[form.iconShow === smile.id ? 'bg-smile' : '']"
                 ></component>
               </div>
             </div>
@@ -134,7 +143,7 @@ const buttons = [
                 id="place"
                 type="text"
                 placeholder="кратко"
-                class="rounded-sm border-b-2 border-green-800 px-4 py-1.5 w-full outline-none bg-white/20"
+                class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20"
               />
             </div>
 
@@ -143,14 +152,12 @@ const buttons = [
                 Порекомендуете ли Вы нас своим друзьям/знакомым?
               </p>
 
-              <div class="flex font-bold text-2xl space-x-4">
+              <div class="flex font-bold text-xl space-x-4">
                 <div
                   v-for="button in buttons"
                   :key="button"
                   @click="form.chooseBtn = button.id"
-                  :class="[
-                    form.chooseBtn === button.id ? 'text-green-500' : '',
-                  ]"
+                  :class="[form.chooseBtn === button.id ? 'text-primary' : '']"
                 >
                   <button class="duration-100 hover:scale-125">
                     {{ button.title }}
@@ -173,8 +180,8 @@ const buttons = [
               <div v-for="number in numbers" :key="number">
                 <button
                   @click="form.comQuality = number.id"
-                  :class="[form.comQuality === number.id ? 'bg-green-400' : '']"
-                  class="border border-black rounded-full w-9 h-9"
+                  :class="[form.comQuality === number.id ? 'bg-smile' : '']"
+                  class="border border-gray-400 text-gray-500 rounded-full w-9 h-9"
                 >
                   {{ number.num }}
                 </button>
@@ -193,7 +200,7 @@ const buttons = [
                 id="num"
                 type="number"
                 placeholder="+992"
-                class="rounded-sm border-b-2 border-green-800 px-4 py-1.5 w-full outline-none bg-white/20"
+                class="rounded-sm border-b-2 border-gray-400 px-4 py-1.5 w-full outline-none bg-white/20"
               />
             </div>
 
@@ -205,7 +212,7 @@ const buttons = [
               <textarea
                 id="wish"
                 type="text"
-                class="rounded-sm border-b-2 border-green-800 px-4 pt-2 pb-4 w-full text-lg outline-none bg-white/20"
+                class="rounded-sm border-b-2 border-gray-400 px-4 pt-2 pb-4 w-full text-lg outline-none bg-white/20"
               />
             </div>
           </div>
@@ -213,7 +220,11 @@ const buttons = [
           <div class="flex flex-col items-center justify-between space-y-4">
             <!-- socials -->
             <div class="flex flex-col items-start space-y-1 font-bold">
-              <a href="#" class="group flex items-center space-x-2">
+              <a
+                target="_blank"
+                href="https://www.instagram.com/latina.dushanbe/"
+                class="group flex items-center space-x-2"
+              >
                 <svg
                   class="fill-[#6F7A8B] group-hover:fill-white duration-150"
                   width="17"
@@ -232,7 +243,10 @@ const buttons = [
                 </p>
               </a>
 
-              <a href="#" class="group flex items-center space-x-2">
+              <a
+                href="tel:+992711070707"
+                class="group flex items-center space-x-2"
+              >
                 <svg
                   class="group-hover:stroke-white duration-150 w-5 h-5"
                   xmlns="http://www.w3.org/2000/svg"
